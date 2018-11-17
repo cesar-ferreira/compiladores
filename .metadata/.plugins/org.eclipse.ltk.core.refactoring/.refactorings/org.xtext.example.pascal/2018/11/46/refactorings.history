@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;org.xtext.example.pascal&apos;&#x0A;- Original project: &apos;org.xtext.example.pascal&apos;&#x0A;- Original element: &apos;org.xtext.example.pascal.validation.CaseValidator.java&apos;" description="Delete element" element1="/src&lt;org.xtext.example.pascal.validation{CaseValidator.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1542486696803" subPackages="false" version="1.0"/>
-</session>
