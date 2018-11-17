@@ -6,7 +6,6 @@ package org.xtext.example.pascal.validation
 import org.eclipse.xtext.validation.Check
 import org.xtext.example.pascal.pascal.assignment_statement
 import org.xtext.example.pascal.pascal.block
-import org.xtext.example.pascal.pascal.case_statement
 import org.xtext.example.pascal.validation.exception.InvalidException
 
 /**
@@ -42,20 +41,4 @@ class PascalValidator extends AbstractPascalValidator {
 			e.printStackTrace()
 		}
 	}
-	
-	@Check
-	def checkCase(case_statement case_statement) {
-		try {
-			CaseValidator.validateCase(case_statement)
-			for (InvalidException exc : BlockValidator.getErrorList()) {
-				error(exc.message, exc.component, null)
-			}
-		} catch (Exception e) {
-			e.printStackTrace()
-		}
-	}
-	
-	
-	
-	
 }

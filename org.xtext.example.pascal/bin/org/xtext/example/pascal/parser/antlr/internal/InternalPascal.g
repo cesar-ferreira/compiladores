@@ -1796,37 +1796,17 @@ rulefactor returns [EObject current=null]
 			)
 		)
 		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getFactorAccess().getSetSetParserRuleCall_3_0());
-				}
-				lv_set_4_0=ruleset
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getFactorRule());
-					}
-					set(
-						$current,
-						"set",
-						lv_set_4_0,
-						"org.xtext.example.pascal.Pascal.set");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		otherlv_5='nil'
+		otherlv_4='nil'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getFactorAccess().getNilKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getFactorAccess().getNilKeyword_3());
 		}
 		    |
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFactorAccess().getBooleanBooleanParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getFactorAccess().getBooleanBooleanParserRuleCall_4_0());
 				}
-				lv_boolean_6_0=ruleboolean
+				lv_boolean_5_0=ruleboolean
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFactorRule());
@@ -1834,7 +1814,7 @@ rulefactor returns [EObject current=null]
 					set(
 						$current,
 						"boolean",
-						lv_boolean_6_0,
+						lv_boolean_5_0,
 						"org.xtext.example.pascal.Pascal.boolean");
 					afterParserOrEnumRuleCall();
 				}
@@ -1844,9 +1824,9 @@ rulefactor returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFactorAccess().getIdentifierIdentifierParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getFactorAccess().getIdentifierIdentifierParserRuleCall_5_0());
 				}
-				lv_identifier_7_0=ruleidentifier
+				lv_identifier_6_0=ruleidentifier
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFactorRule());
@@ -1854,7 +1834,7 @@ rulefactor returns [EObject current=null]
 					set(
 						$current,
 						"identifier",
-						lv_identifier_7_0,
+						lv_identifier_6_0,
 						"org.xtext.example.pascal.Pascal.identifier");
 					afterParserOrEnumRuleCall();
 				}
@@ -1864,9 +1844,9 @@ rulefactor returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFactorAccess().getFunction_designatorFunction_designatorParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getFactorAccess().getFunction_designatorFunction_designatorParserRuleCall_6_0());
 				}
-				lv_function_designator_8_0=rulefunction_designator
+				lv_function_designator_7_0=rulefunction_designator
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFactorRule());
@@ -1874,7 +1854,7 @@ rulefactor returns [EObject current=null]
 					set(
 						$current,
 						"function_designator",
-						lv_function_designator_8_0,
+						lv_function_designator_7_0,
 						"org.xtext.example.pascal.Pascal.function_designator");
 					afterParserOrEnumRuleCall();
 				}
@@ -1882,16 +1862,16 @@ rulefactor returns [EObject current=null]
 		)
 		    |
 		(
-			otherlv_9='('
+			otherlv_8='('
 			{
-				newLeafNode(otherlv_9, grammarAccess.getFactorAccess().getLeftParenthesisKeyword_8_0());
+				newLeafNode(otherlv_8, grammarAccess.getFactorAccess().getLeftParenthesisKeyword_7_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getFactorAccess().getExpressionExpressionParserRuleCall_8_1_0());
+						newCompositeNode(grammarAccess.getFactorAccess().getExpressionExpressionParserRuleCall_7_1_0());
 					}
-					lv_expression_10_0=ruleexpression
+					lv_expression_9_0=ruleexpression
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFactorRule());
@@ -1899,29 +1879,29 @@ rulefactor returns [EObject current=null]
 						set(
 							$current,
 							"expression",
-							lv_expression_10_0,
+							lv_expression_9_0,
 							"org.xtext.example.pascal.Pascal.expression");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_11=')'
+			otherlv_10=')'
 			{
-				newLeafNode(otherlv_11, grammarAccess.getFactorAccess().getRightParenthesisKeyword_8_2());
+				newLeafNode(otherlv_10, grammarAccess.getFactorAccess().getRightParenthesisKeyword_7_2());
 			}
 		)
 		    |
 		(
-			otherlv_12='not'
+			otherlv_11='not'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getFactorAccess().getNotKeyword_9_0());
+				newLeafNode(otherlv_11, grammarAccess.getFactorAccess().getNotKeyword_8_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getFactorAccess().getFactorFactorParserRuleCall_9_1_0());
+						newCompositeNode(grammarAccess.getFactorAccess().getFactorFactorParserRuleCall_8_1_0());
 					}
-					lv_factor_13_0=rulefactor
+					lv_factor_12_0=rulefactor
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFactorRule());
@@ -1929,7 +1909,7 @@ rulefactor returns [EObject current=null]
 						set(
 							$current,
 							"factor",
-							lv_factor_13_0,
+							lv_factor_12_0,
 							"org.xtext.example.pascal.Pascal.factor");
 						afterParserOrEnumRuleCall();
 					}
@@ -2022,127 +2002,6 @@ rulefunction_designator returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)?
-	)
-;
-
-// Entry rule entryRuleset
-entryRuleset returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getSetRule()); }
-	iv_ruleset=ruleset
-	{ $current=$iv_ruleset.current; }
-	EOF;
-
-// Rule set
-ruleset returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='['
-		{
-			newLeafNode(otherlv_0, grammarAccess.getSetAccess().getLeftSquareBracketKeyword_0());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getSetAccess().getElement_listElement_listParserRuleCall_1_0());
-				}
-				lv_element_list_1_0=ruleelement_list
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getSetRule());
-					}
-					set(
-						$current,
-						"element_list",
-						lv_element_list_1_0,
-						"org.xtext.example.pascal.Pascal.element_list");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_2=']'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getSetAccess().getRightSquareBracketKeyword_2());
-		}
-	)
-;
-
-// Entry rule entryRuleelement_list
-entryRuleelement_list returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getElement_listRule()); }
-	iv_ruleelement_list=ruleelement_list
-	{ $current=$iv_ruleelement_list.current; }
-	EOF;
-
-// Rule element_list
-ruleelement_list returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getElement_listAccess().getElement_listAction_0(),
-					$current);
-			}
-		)
-		(
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getElement_listAccess().getExpressionExpressionParserRuleCall_1_0_0());
-					}
-					lv_expression_1_0=ruleexpression
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getElement_listRule());
-						}
-						add(
-							$current,
-							"expression",
-							lv_expression_1_0,
-							"org.xtext.example.pascal.Pascal.expression");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_2=','
-				{
-					newLeafNode(otherlv_2, grammarAccess.getElement_listAccess().getCommaKeyword_1_1_0());
-				}
-				(
-					(
-						{
-							newCompositeNode(grammarAccess.getElement_listAccess().getExpressionExpressionParserRuleCall_1_1_1_0());
-						}
-						lv_expression_3_0=ruleexpression
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getElement_listRule());
-							}
-							add(
-								$current,
-								"expression",
-								lv_expression_3_0,
-								"org.xtext.example.pascal.Pascal.expression");
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
 		)?
 	)
 ;
@@ -2841,29 +2700,9 @@ rulestructured_statement returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getStructured_statementAccess().getConditional_statementConditional_statementParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getStructured_statementAccess().getWith_statementWith_statementParserRuleCall_2_0());
 				}
-				lv_conditional_statement_2_0=ruleconditional_statement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getStructured_statementRule());
-					}
-					set(
-						$current,
-						"conditional_statement",
-						lv_conditional_statement_2_0,
-						"org.xtext.example.pascal.Pascal.conditional_statement");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getStructured_statementAccess().getWith_statementWith_statementParserRuleCall_3_0());
-				}
-				lv_with_statement_3_0=rulewith_statement
+				lv_with_statement_2_0=rulewith_statement
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getStructured_statementRule());
@@ -2871,7 +2710,7 @@ rulestructured_statement returns [EObject current=null]
 					set(
 						$current,
 						"with_statement",
-						lv_with_statement_3_0,
+						lv_with_statement_2_0,
 						"org.xtext.example.pascal.Pascal.with_statement");
 					afterParserOrEnumRuleCall();
 				}
@@ -2970,378 +2809,6 @@ rulewith_statement returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleconditional_statement
-entryRuleconditional_statement returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getConditional_statementRule()); }
-	iv_ruleconditional_statement=ruleconditional_statement
-	{ $current=$iv_ruleconditional_statement.current; }
-	EOF;
-
-// Rule conditional_statement
-ruleconditional_statement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getConditional_statementAccess().getIf_statementIf_statementParserRuleCall_0_0());
-				}
-				lv_if_statement_0_0=ruleif_statement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getConditional_statementRule());
-					}
-					set(
-						$current,
-						"if_statement",
-						lv_if_statement_0_0,
-						"org.xtext.example.pascal.Pascal.if_statement");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getConditional_statementAccess().getCase_statementCase_statementParserRuleCall_1_0());
-				}
-				lv_case_statement_1_0=rulecase_statement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getConditional_statementRule());
-					}
-					set(
-						$current,
-						"case_statement",
-						lv_case_statement_1_0,
-						"org.xtext.example.pascal.Pascal.case_statement");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Entry rule entryRulecase_statement
-entryRulecase_statement returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getCase_statementRule()); }
-	iv_rulecase_statement=rulecase_statement
-	{ $current=$iv_rulecase_statement.current; }
-	EOF;
-
-// Rule case_statement
-rulecase_statement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='case'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getCase_statementAccess().getCaseKeyword_0());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getCase_statementAccess().getExpressionExpressionParserRuleCall_1_0());
-				}
-				lv_expression_1_0=ruleexpression
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCase_statementRule());
-					}
-					set(
-						$current,
-						"expression",
-						lv_expression_1_0,
-						"org.xtext.example.pascal.Pascal.expression");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_2='of'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getCase_statementAccess().getOfKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getCase_statementAccess().getCase_limbCase_limbParserRuleCall_3_0());
-				}
-				lv_case_limb_3_0=rulecase_limb
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCase_statementRule());
-					}
-					add(
-						$current,
-						"case_limb",
-						lv_case_limb_3_0,
-						"org.xtext.example.pascal.Pascal.case_limb");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_4=';'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getCase_statementAccess().getSemicolonKeyword_4_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getCase_statementAccess().getCase_limbCase_limbParserRuleCall_4_1_0());
-					}
-					lv_case_limb_5_0=rulecase_limb
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getCase_statementRule());
-						}
-						add(
-							$current,
-							"case_limb",
-							lv_case_limb_5_0,
-							"org.xtext.example.pascal.Pascal.case_limb");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-		(
-			otherlv_6=';'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getCase_statementAccess().getSemicolonKeyword_5());
-			}
-		)?
-		otherlv_7='end'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getCase_statementAccess().getEndKeyword_6());
-		}
-	)
-;
-
-// Entry rule entryRulecase_limb
-entryRulecase_limb returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getCase_limbRule()); }
-	iv_rulecase_limb=rulecase_limb
-	{ $current=$iv_rulecase_limb.current; }
-	EOF;
-
-// Rule case_limb
-rulecase_limb returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getCase_limbAccess().getCase_label_listCase_label_listParserRuleCall_0_0());
-				}
-				lv_case_label_list_0_0=rulecase_label_list
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCase_limbRule());
-					}
-					set(
-						$current,
-						"case_label_list",
-						lv_case_label_list_0_0,
-						"org.xtext.example.pascal.Pascal.case_label_list");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_1=':'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getCase_limbAccess().getColonKeyword_1());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getCase_limbAccess().getStatementStatementParserRuleCall_2_0());
-				}
-				lv_statement_2_0=rulestatement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCase_limbRule());
-					}
-					set(
-						$current,
-						"statement",
-						lv_statement_2_0,
-						"org.xtext.example.pascal.Pascal.statement");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Entry rule entryRulecase_label_list
-entryRulecase_label_list returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getCase_label_listRule()); }
-	iv_rulecase_label_list=rulecase_label_list
-	{ $current=$iv_rulecase_label_list.current; }
-	EOF;
-
-// Rule case_label_list
-rulecase_label_list returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getCase_label_listAccess().getConstantConstantParserRuleCall_0_0());
-				}
-				lv_constant_0_0=ruleconstant
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCase_label_listRule());
-					}
-					add(
-						$current,
-						"constant",
-						lv_constant_0_0,
-						"org.xtext.example.pascal.Pascal.constant");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_1=','
-			{
-				newLeafNode(otherlv_1, grammarAccess.getCase_label_listAccess().getCommaKeyword_1_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getCase_label_listAccess().getConstantConstantParserRuleCall_1_1_0());
-					}
-					lv_constant_2_0=ruleconstant
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getCase_label_listRule());
-						}
-						add(
-							$current,
-							"constant",
-							lv_constant_2_0,
-							"org.xtext.example.pascal.Pascal.constant");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-	)
-;
-
-// Entry rule entryRuleif_statement
-entryRuleif_statement returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getIf_statementRule()); }
-	iv_ruleif_statement=ruleif_statement
-	{ $current=$iv_ruleif_statement.current; }
-	EOF;
-
-// Rule if_statement
-ruleif_statement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='if'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getIf_statementAccess().getIfKeyword_0());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getIf_statementAccess().getExpressionExpressionParserRuleCall_1_0());
-				}
-				lv_expression_1_0=ruleexpression
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getIf_statementRule());
-					}
-					set(
-						$current,
-						"expression",
-						lv_expression_1_0,
-						"org.xtext.example.pascal.Pascal.expression");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_2='then'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getIf_statementAccess().getThenKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getIf_statementAccess().getStatementStatementParserRuleCall_3_0());
-				}
-				lv_statement_3_0=rulestatement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getIf_statementRule());
-					}
-					add(
-						$current,
-						"statement",
-						lv_statement_3_0,
-						"org.xtext.example.pascal.Pascal.statement");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_4='else'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getIf_statementAccess().getElseKeyword_4_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getIf_statementAccess().getStatementStatementParserRuleCall_4_1_0());
-					}
-					lv_statement_5_0=rulestatement
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getIf_statementRule());
-						}
-						add(
-							$current,
-							"statement",
-							lv_statement_5_0,
-							"org.xtext.example.pascal.Pascal.statement");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-	)
-;
-
 // Entry rule entryRulerepetitive_statement
 entryRulerepetitive_statement returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getRepetitive_statementRule()); }
@@ -3359,251 +2826,19 @@ rulerepetitive_statement returns [EObject current=null]
 }:
 	(
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getRepetitive_statementAccess().getWhile_statementWhile_statementParserRuleCall_0_0());
-				}
-				lv_while_statement_0_0=rulewhile_statement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRepetitive_statementRule());
-					}
-					set(
-						$current,
-						"while_statement",
-						lv_while_statement_0_0,
-						"org.xtext.example.pascal.Pascal.while_statement");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getRepetitive_statementAccess().getRepeat_statementRepeat_statementParserRuleCall_1_0());
-				}
-				lv_repeat_statement_1_0=rulerepeat_statement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRepetitive_statementRule());
-					}
-					set(
-						$current,
-						"repeat_statement",
-						lv_repeat_statement_1_0,
-						"org.xtext.example.pascal.Pascal.repeat_statement");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getRepetitive_statementAccess().getFor_statementFor_statementParserRuleCall_2_0());
-				}
-				lv_for_statement_2_0=rulefor_statement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRepetitive_statementRule());
-					}
-					set(
-						$current,
-						"for_statement",
-						lv_for_statement_2_0,
-						"org.xtext.example.pascal.Pascal.for_statement");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Entry rule entryRulefor_statement
-entryRulefor_statement returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getFor_statementRule()); }
-	iv_rulefor_statement=rulefor_statement
-	{ $current=$iv_rulefor_statement.current; }
-	EOF;
-
-// Rule for_statement
-rulefor_statement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='for'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getFor_statementAccess().getForKeyword_0());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getFor_statementAccess().getVariable_identifierIdentifierParserRuleCall_1_0());
-				}
-				lv_variable_identifier_1_0=ruleidentifier
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getFor_statementRule());
-					}
-					set(
-						$current,
-						"variable_identifier",
-						lv_variable_identifier_1_0,
-						"org.xtext.example.pascal.Pascal.identifier");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_2=':='
-		{
-			newLeafNode(otherlv_2, grammarAccess.getFor_statementAccess().getColonEqualsSignKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getFor_statementAccess().getInitial_expressionInitial_expressionParserRuleCall_3_0());
-				}
-				lv_initial_expression_3_0=ruleinitial_expression
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getFor_statementRule());
-					}
-					set(
-						$current,
-						"initial_expression",
-						lv_initial_expression_3_0,
-						"org.xtext.example.pascal.Pascal.initial_expression");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_4='to'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getFor_statementAccess().getToKeyword_4_0());
+				newCompositeNode(grammarAccess.getRepetitive_statementAccess().getRepeat_statementRepeat_statementParserRuleCall_0());
 			}
-			    |
-			otherlv_5='downto'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getFor_statementAccess().getDowntoKeyword_4_1());
-			}
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getFor_statementAccess().getFinal_expressionFinal_expressionParserRuleCall_5_0());
-				}
-				lv_final_expression_6_0=rulefinal_expression
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getFor_statementRule());
-					}
-					set(
-						$current,
-						"final_expression",
-						lv_final_expression_6_0,
-						"org.xtext.example.pascal.Pascal.final_expression");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_7='do'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getFor_statementAccess().getDoKeyword_6());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getFor_statementAccess().getStatementStatementParserRuleCall_7_0());
-				}
-				lv_statement_8_0=rulestatement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getFor_statementRule());
-					}
-					set(
-						$current,
-						"statement",
-						lv_statement_8_0,
-						"org.xtext.example.pascal.Pascal.statement");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Entry rule entryRulefinal_expression
-entryRulefinal_expression returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getFinal_expressionRule()); }
-	iv_rulefinal_expression=rulefinal_expression
-	{ $current=$iv_rulefinal_expression.current; }
-	EOF;
-
-// Rule final_expression
-rulefinal_expression returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				newCompositeNode(grammarAccess.getFinal_expressionAccess().getExpressionExpressionParserRuleCall_0());
-			}
-			lv_expression_0_0=ruleexpression
+			lv_repeat_statement_0_0=rulerepeat_statement
 			{
 				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getFinal_expressionRule());
+					$current = createModelElementForParent(grammarAccess.getRepetitive_statementRule());
 				}
 				set(
 					$current,
-					"expression",
-					lv_expression_0_0,
-					"org.xtext.example.pascal.Pascal.expression");
-				afterParserOrEnumRuleCall();
-			}
-		)
-	)
-;
-
-// Entry rule entryRuleinitial_expression
-entryRuleinitial_expression returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getInitial_expressionRule()); }
-	iv_ruleinitial_expression=ruleinitial_expression
-	{ $current=$iv_ruleinitial_expression.current; }
-	EOF;
-
-// Rule initial_expression
-ruleinitial_expression returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				newCompositeNode(grammarAccess.getInitial_expressionAccess().getExpressionExpressionParserRuleCall_0());
-			}
-			lv_expression_0_0=ruleexpression
-			{
-				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getInitial_expressionRule());
-				}
-				set(
-					$current,
-					"expression",
-					lv_expression_0_0,
-					"org.xtext.example.pascal.Pascal.expression");
+					"repeat_statement",
+					lv_repeat_statement_0_0,
+					"org.xtext.example.pascal.Pascal.repeat_statement");
 				afterParserOrEnumRuleCall();
 			}
 		)
@@ -3668,71 +2903,6 @@ rulerepeat_statement returns [EObject current=null]
 						"expression",
 						lv_expression_3_0,
 						"org.xtext.example.pascal.Pascal.expression");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Entry rule entryRulewhile_statement
-entryRulewhile_statement returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getWhile_statementRule()); }
-	iv_rulewhile_statement=rulewhile_statement
-	{ $current=$iv_rulewhile_statement.current; }
-	EOF;
-
-// Rule while_statement
-rulewhile_statement returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='while'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getWhile_statementAccess().getWhileKeyword_0());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getWhile_statementAccess().getExpressionExpressionParserRuleCall_1_0());
-				}
-				lv_expression_1_0=ruleexpression
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getWhile_statementRule());
-					}
-					set(
-						$current,
-						"expression",
-						lv_expression_1_0,
-						"org.xtext.example.pascal.Pascal.expression");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_2='do'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getWhile_statementAccess().getDoKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getWhile_statementAccess().getStatementStatementParserRuleCall_3_0());
-				}
-				lv_statement_3_0=rulestatement
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getWhile_statementRule());
-					}
-					set(
-						$current,
-						"statement",
-						lv_statement_3_0,
-						"org.xtext.example.pascal.Pascal.statement");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -4882,29 +4052,9 @@ ruleunpacked_structured_type returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getUnpacked_structured_typeAccess().getRecord_typeRecord_typeParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getUnpacked_structured_typeAccess().getSet_typeSet_typeParserRuleCall_1_0());
 				}
-				lv_record_type_1_0=rulerecord_type
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getUnpacked_structured_typeRule());
-					}
-					set(
-						$current,
-						"record_type",
-						lv_record_type_1_0,
-						"org.xtext.example.pascal.Pascal.record_type");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		    |
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getUnpacked_structured_typeAccess().getSet_typeSet_typeParserRuleCall_2_0());
-				}
-				lv_set_type_2_0=ruleset_type
+				lv_set_type_1_0=ruleset_type
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getUnpacked_structured_typeRule());
@@ -4912,7 +4062,7 @@ ruleunpacked_structured_type returns [EObject current=null]
 					set(
 						$current,
 						"set_type",
-						lv_set_type_2_0,
+						lv_set_type_1_0,
 						"org.xtext.example.pascal.Pascal.set_type");
 					afterParserOrEnumRuleCall();
 				}
@@ -4922,9 +4072,9 @@ ruleunpacked_structured_type returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getUnpacked_structured_typeAccess().getFile_typeFile_typeParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getUnpacked_structured_typeAccess().getFile_typeFile_typeParserRuleCall_2_0());
 				}
-				lv_file_type_3_0=rulefile_type
+				lv_file_type_2_0=rulefile_type
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getUnpacked_structured_typeRule());
@@ -4932,7 +4082,7 @@ ruleunpacked_structured_type returns [EObject current=null]
 					set(
 						$current,
 						"file_type",
-						lv_file_type_3_0,
+						lv_file_type_2_0,
 						"org.xtext.example.pascal.Pascal.file_type");
 					afterParserOrEnumRuleCall();
 				}
@@ -5102,513 +4252,6 @@ rulebase_type returns [EObject current=null]
 				afterParserOrEnumRuleCall();
 			}
 		)
-	)
-;
-
-// Entry rule entryRulerecord_type
-entryRulerecord_type returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getRecord_typeRule()); }
-	iv_rulerecord_type=rulerecord_type
-	{ $current=$iv_rulerecord_type.current; }
-	EOF;
-
-// Rule record_type
-rulerecord_type returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='record'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getRecord_typeAccess().getRecordKeyword_0());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getRecord_typeAccess().getField_listField_listParserRuleCall_1_0());
-				}
-				lv_field_list_1_0=rulefield_list
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRecord_typeRule());
-					}
-					set(
-						$current,
-						"field_list",
-						lv_field_list_1_0,
-						"org.xtext.example.pascal.Pascal.field_list");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_2='end'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getRecord_typeAccess().getEndKeyword_2());
-		}
-	)
-;
-
-// Entry rule entryRulefield_list
-entryRulefield_list returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getField_listRule()); }
-	iv_rulefield_list=rulefield_list
-	{ $current=$iv_rulefield_list.current; }
-	EOF;
-
-// Rule field_list
-rulefield_list returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getField_listAccess().getField_listAction_0(),
-					$current);
-			}
-		)
-		(
-			(
-				(
-					(
-						(
-							{
-								newCompositeNode(grammarAccess.getField_listAccess().getFixed_partFixed_partParserRuleCall_1_0_0_0_0());
-							}
-							lv_fixed_part_1_0=rulefixed_part
-							{
-								if ($current==null) {
-									$current = createModelElementForParent(grammarAccess.getField_listRule());
-								}
-								set(
-									$current,
-									"fixed_part",
-									lv_fixed_part_1_0,
-									"org.xtext.example.pascal.Pascal.fixed_part");
-								afterParserOrEnumRuleCall();
-							}
-						)
-					)
-					(
-						otherlv_2=';'
-						{
-							newLeafNode(otherlv_2, grammarAccess.getField_listAccess().getSemicolonKeyword_1_0_0_1_0());
-						}
-						(
-							(
-								{
-									newCompositeNode(grammarAccess.getField_listAccess().getVariant_partVariant_partParserRuleCall_1_0_0_1_1_0());
-								}
-								lv_variant_part_3_0=rulevariant_part
-								{
-									if ($current==null) {
-										$current = createModelElementForParent(grammarAccess.getField_listRule());
-									}
-									set(
-										$current,
-										"variant_part",
-										lv_variant_part_3_0,
-										"org.xtext.example.pascal.Pascal.variant_part");
-									afterParserOrEnumRuleCall();
-								}
-							)
-						)
-					)?
-				)
-				    |
-				(
-					(
-						{
-							newCompositeNode(grammarAccess.getField_listAccess().getVariant_partVariant_partParserRuleCall_1_0_1_0());
-						}
-						lv_variant_part_4_0=rulevariant_part
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getField_listRule());
-							}
-							set(
-								$current,
-								"variant_part",
-								lv_variant_part_4_0,
-								"org.xtext.example.pascal.Pascal.variant_part");
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)
-			(
-				otherlv_5=';'
-				{
-					newLeafNode(otherlv_5, grammarAccess.getField_listAccess().getSemicolonKeyword_1_1());
-				}
-			)?
-		)?
-	)
-;
-
-// Entry rule entryRulefixed_part
-entryRulefixed_part returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getFixed_partRule()); }
-	iv_rulefixed_part=rulefixed_part
-	{ $current=$iv_rulefixed_part.current; }
-	EOF;
-
-// Rule fixed_part
-rulefixed_part returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getFixed_partAccess().getRecord_sectionRecord_sectionParserRuleCall_0_0());
-				}
-				lv_record_section_0_0=rulerecord_section
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getFixed_partRule());
-					}
-					add(
-						$current,
-						"record_section",
-						lv_record_section_0_0,
-						"org.xtext.example.pascal.Pascal.record_section");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_1=';'
-			{
-				newLeafNode(otherlv_1, grammarAccess.getFixed_partAccess().getSemicolonKeyword_1_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getFixed_partAccess().getRecord_sectionRecord_sectionParserRuleCall_1_1_0());
-					}
-					lv_record_section_2_0=rulerecord_section
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getFixed_partRule());
-						}
-						add(
-							$current,
-							"record_section",
-							lv_record_section_2_0,
-							"org.xtext.example.pascal.Pascal.record_section");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-	)
-;
-
-// Entry rule entryRulerecord_section
-entryRulerecord_section returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getRecord_sectionRule()); }
-	iv_rulerecord_section=rulerecord_section
-	{ $current=$iv_rulerecord_section.current; }
-	EOF;
-
-// Rule record_section
-rulerecord_section returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getRecord_sectionAccess().getIdentifier_listIdentifier_listParserRuleCall_0_0());
-				}
-				lv_identifier_list_0_0=ruleidentifier_list
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRecord_sectionRule());
-					}
-					set(
-						$current,
-						"identifier_list",
-						lv_identifier_list_0_0,
-						"org.xtext.example.pascal.Pascal.identifier_list");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_1=':'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getRecord_sectionAccess().getColonKeyword_1());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getRecord_sectionAccess().getTypeTypeParserRuleCall_2_0());
-				}
-				lv_type_2_0=ruletype
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getRecord_sectionRule());
-					}
-					set(
-						$current,
-						"type",
-						lv_type_2_0,
-						"org.xtext.example.pascal.Pascal.type");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-	)
-;
-
-// Entry rule entryRulevariant_part
-entryRulevariant_part returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVariant_partRule()); }
-	iv_rulevariant_part=rulevariant_part
-	{ $current=$iv_rulevariant_part.current; }
-	EOF;
-
-// Rule variant_part
-rulevariant_part returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='case'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getVariant_partAccess().getCaseKeyword_0());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVariant_partAccess().getTag_fieldTag_fieldParserRuleCall_1_0());
-				}
-				lv_tag_field_1_0=ruletag_field
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVariant_partRule());
-					}
-					set(
-						$current,
-						"tag_field",
-						lv_tag_field_1_0,
-						"org.xtext.example.pascal.Pascal.tag_field");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVariant_partAccess().getType_identifierType_identifierParserRuleCall_2_0());
-				}
-				lv_type_identifier_2_0=ruletype_identifier
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVariant_partRule());
-					}
-					set(
-						$current,
-						"type_identifier",
-						lv_type_identifier_2_0,
-						"org.xtext.example.pascal.Pascal.type_identifier");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3='of'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVariant_partAccess().getOfKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVariant_partAccess().getVariantVariantParserRuleCall_4_0());
-				}
-				lv_variant_4_0=rulevariant
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVariant_partRule());
-					}
-					add(
-						$current,
-						"variant",
-						lv_variant_4_0,
-						"org.xtext.example.pascal.Pascal.variant");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_5=';'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getVariant_partAccess().getSemicolonKeyword_5_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getVariant_partAccess().getVariantVariantParserRuleCall_5_1_0());
-					}
-					lv_variant_6_0=rulevariant
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getVariant_partRule());
-						}
-						add(
-							$current,
-							"variant",
-							lv_variant_6_0,
-							"org.xtext.example.pascal.Pascal.variant");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-	)
-;
-
-// Entry rule entryRulevariant
-entryRulevariant returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVariantRule()); }
-	iv_rulevariant=rulevariant
-	{ $current=$iv_rulevariant.current; }
-	EOF;
-
-// Rule variant
-rulevariant returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVariantAccess().getCase_label_listCase_label_listParserRuleCall_0_0());
-				}
-				lv_case_label_list_0_0=rulecase_label_list
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVariantRule());
-					}
-					set(
-						$current,
-						"case_label_list",
-						lv_case_label_list_0_0,
-						"org.xtext.example.pascal.Pascal.case_label_list");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_1=':'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getVariantAccess().getColonKeyword_1());
-		}
-		otherlv_2='('
-		{
-			newLeafNode(otherlv_2, grammarAccess.getVariantAccess().getLeftParenthesisKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVariantAccess().getField_listField_listParserRuleCall_3_0());
-				}
-				lv_field_list_3_0=rulefield_list
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVariantRule());
-					}
-					set(
-						$current,
-						"field_list",
-						lv_field_list_3_0,
-						"org.xtext.example.pascal.Pascal.field_list");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_4=')'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVariantAccess().getRightParenthesisKeyword_4());
-		}
-	)
-;
-
-// Entry rule entryRuletag_field
-entryRuletag_field returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getTag_fieldRule()); }
-	iv_ruletag_field=ruletag_field
-	{ $current=$iv_ruletag_field.current; }
-	EOF;
-
-// Rule tag_field
-ruletag_field returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getTag_fieldAccess().getTag_fieldAction_0(),
-					$current);
-			}
-		)
-		(
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTag_fieldAccess().getIdentifierIdentifierParserRuleCall_1_0_0());
-					}
-					lv_identifier_1_0=ruleidentifier
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTag_fieldRule());
-						}
-						set(
-							$current,
-							"identifier",
-							lv_identifier_1_0,
-							"org.xtext.example.pascal.Pascal.identifier");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			otherlv_2=':'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getTag_fieldAccess().getColonKeyword_1_1());
-			}
-		)?
 	)
 ;
 

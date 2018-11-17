@@ -105,7 +105,7 @@ multiplication_operator:
 ;
 
 factor: {factor}
-	variable=variable | number=number | strings=strings | set=set | "nil" | boolean=boolean 
+	variable=variable | number=number | strings=strings | "nil" | boolean=boolean 
 	| identifier=identifier
 	| function_designator=function_designator | "(" expression=expression ")" | "not" factor=factor	
 ;
@@ -116,14 +116,6 @@ boolean:
 
 function_designator:
 	function_identifier=identifier (actual_parameter_list=actual_parameter_list)?
-;
-
-set:
-	"[" element_list=element_list "]"
-;
-
-element_list: {element_list}
-	(expression+=expression ("," expression+=expression)*)?
 ;
 
 terminal strings:
@@ -178,57 +170,19 @@ unsigned_digit_sequence:
 ;
 
 structured_statement:
-	compound_statement=compound_statement | repetitive_statement=repetitive_statement | conditional_statement=conditional_statement | with_statement=with_statement
+	compound_statement=compound_statement | repetitive_statement=repetitive_statement | with_statement=with_statement
 ;
 
 with_statement:
 	"with" variable+=variable ("," variable+=variable)* "do" statement=statement	
 ;
 
-conditional_statement:
-	if_statement=if_statement | case_statement=case_statement
-;
-
-case_statement:
-	"case" expression=expression "of"
-	case_limb+=case_limb (";" case_limb+=case_limb)* (";")?
-	"end"
-;
-
-case_limb:
-	case_label_list=case_label_list ":" statement=statement
-;
-
-case_label_list:
-	constant+=constant ("," constant+=constant)*
-;
-
-if_statement:
-	"if" expression=expression "then" statement+=statement ("else" statement+=statement)?
-;
-
 repetitive_statement:
-	while_statement=while_statement | repeat_statement=repeat_statement | for_statement=for_statement
-;
-
-for_statement:
-	"for" variable_identifier=identifier ":=" initial_expression=initial_expression ("to" | "downto") final_expression=final_expression "do" statement=statement
-;
-
-final_expression:
-	expression=expression
-;
-
-initial_expression:
-	expression=expression
+	repeat_statement=repeat_statement
 ;
 
 repeat_statement:
 	"repeat" statement_sequence=statement_sequence "until" expression=expression
-;
-
-while_statement:
-	"while" expression=expression "do" statement=statement
 ;
 
 compound_statement:
@@ -293,8 +247,7 @@ structured_type:
 ;
 
 unpacked_structured_type:
-	array_type=array_type | record_type=record_type 
-	| set_type=set_type | file_type=file_type	
+	array_type=array_type | set_type=set_type | file_type=file_type	
 ;
 
 file_type:
@@ -311,34 +264,6 @@ set_type:
 
 base_type:
 	type=type	
-;
-
-record_type:
-	"record" field_list=field_list "end"
-;
-
-field_list: {field_list}
-	( (fixed_part=fixed_part (";" variant_part=variant_part)? | variant_part=variant_part) (";")? )?
-;
-
-fixed_part:
-	record_section+=record_section (";" record_section+=record_section)*
-;
-
-record_section:
-	identifier_list=identifier_list ":" type=type
-;
-
-variant_part:
-	"case" tag_field=tag_field type_identifier=type_identifier "of" variant+=variant (";" variant+=variant)*
-;
-
-variant:
-	case_label_list=case_label_list ":" "(" field_list=field_list ")"
-;
-
-tag_field: {tag_field}
-	(identifier=identifier ":")?
 ;
 
 array_type:
@@ -477,3 +402,6 @@ output_list:
 	
 output_value:
 	expression (";" expression+=expression (":" expression+=expression)? )?;
+	
+	
+comment : '(*' -> '*)' | '{' -> '}';	
