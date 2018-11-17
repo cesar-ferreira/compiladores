@@ -627,16 +627,23 @@ finally {
 
 // Entry rule entryRulesimple_expression
 entryRulesimple_expression
+@init { 
+	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
+}
 :
 { before(grammarAccess.getSimple_expressionRule()); }
 	 rulesimple_expression
 { after(grammarAccess.getSimple_expressionRule()); } 
 	 EOF 
 ;
+finally {
+	myHiddenTokenState.restore();
+}
 
 // Rule simple_expression
 rulesimple_expression 
 	@init {
+		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
 		int stackSize = keepStackSize();
 	}
 	:
@@ -648,6 +655,7 @@ rulesimple_expression
 ;
 finally {
 	restoreStackSize(stackSize);
+	myHiddenTokenState.restore();
 }
 
 // Entry rule entryRuleaddition_operator
@@ -1727,16 +1735,23 @@ finally {
 
 // Entry rule entryRulesubrange_type
 entryRulesubrange_type
+@init { 
+	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
+}
 :
 { before(grammarAccess.getSubrange_typeRule()); }
 	 rulesubrange_type
 { after(grammarAccess.getSubrange_typeRule()); } 
 	 EOF 
 ;
+finally {
+	myHiddenTokenState.restore();
+}
 
 // Rule subrange_type
 rulesubrange_type 
 	@init {
+		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
 		int stackSize = keepStackSize();
 	}
 	:
@@ -1748,6 +1763,7 @@ rulesubrange_type
 ;
 finally {
 	restoreStackSize(stackSize);
+	myHiddenTokenState.restore();
 }
 
 // Entry rule entryRulelower_bound
@@ -12728,13 +12744,13 @@ finally {
 
 RULE_STRINGS : '\'' ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'^'|'?'|'.'|'/'|'\\'|'*'|'%'|'&'|'@'|'#'|'('|')'|'$'|'='|'{'|'}'|'['|']'|','|'!'|'|'|'+'|'-')* '\'';
 
+RULE_ML_COMMENT : ('(*' ( options {greedy=false;} : . )*'*)'|'{' ( options {greedy=false;} : . )*'}');
+
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_INT : ('0'..'9')+;
 
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
-
-RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 

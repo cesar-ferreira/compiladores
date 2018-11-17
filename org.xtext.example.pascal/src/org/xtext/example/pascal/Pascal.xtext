@@ -88,7 +88,7 @@ relational_operator:
 	"=" | "<>" | "<" | "<=" | ">" | ">=" | "in"
 ;
 
-simple_expression:
+simple_expression hidden(WS):
 	(sign=sign)? term+=term (addition_operator+=addition_operator term+=term)*
 ;
 
@@ -286,7 +286,7 @@ enumerated_type:
 	"(" identifier_list=identifier_list ")"
 ;
 
-subrange_type:
+subrange_type hidden(WS):
 	lower_bound=lower_bound ".." upper_bound=upper_bound
 ;
 
@@ -404,4 +404,4 @@ output_value:
 	expression (";" expression+=expression (":" expression+=expression)? )?;
 	
 	
-comment : '(*' -> '*)' | '{' -> '}';	
+terminal ML_COMMENT : '(*' -> '*)' | '{' -> '}';	

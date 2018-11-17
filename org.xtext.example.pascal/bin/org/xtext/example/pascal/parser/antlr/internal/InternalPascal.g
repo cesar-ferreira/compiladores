@@ -1444,16 +1444,22 @@ rulerelational_operator returns [AntlrDatatypeRuleToken current=new AntlrDatatyp
 ;
 
 // Entry rule entryRulesimple_expression
-entryRulesimple_expression returns [EObject current=null]:
+entryRulesimple_expression returns [EObject current=null]@init {
+	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
+}:
 	{ newCompositeNode(grammarAccess.getSimple_expressionRule()); }
 	iv_rulesimple_expression=rulesimple_expression
 	{ $current=$iv_rulesimple_expression.current; }
 	EOF;
+finally {
+	myHiddenTokenState.restore();
+}
 
 // Rule simple_expression
 rulesimple_expression returns [EObject current=null]
 @init {
 	enterRule();
+	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
 }
 @after {
 	leaveRule();
@@ -1539,6 +1545,9 @@ rulesimple_expression returns [EObject current=null]
 		)*
 	)
 ;
+finally {
+	myHiddenTokenState.restore();
+}
 
 // Entry rule entryRuleaddition_operator
 entryRuleaddition_operator returns [EObject current=null]:
@@ -4530,16 +4539,22 @@ ruleenumerated_type returns [EObject current=null]
 ;
 
 // Entry rule entryRulesubrange_type
-entryRulesubrange_type returns [EObject current=null]:
+entryRulesubrange_type returns [EObject current=null]@init {
+	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
+}:
 	{ newCompositeNode(grammarAccess.getSubrange_typeRule()); }
 	iv_rulesubrange_type=rulesubrange_type
 	{ $current=$iv_rulesubrange_type.current; }
 	EOF;
+finally {
+	myHiddenTokenState.restore();
+}
 
 // Rule subrange_type
 rulesubrange_type returns [EObject current=null]
 @init {
 	enterRule();
+	HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS");
 }
 @after {
 	leaveRule();
@@ -4589,6 +4604,9 @@ rulesubrange_type returns [EObject current=null]
 		)
 	)
 ;
+finally {
+	myHiddenTokenState.restore();
+}
 
 // Entry rule entryRulelower_bound
 entryRulelower_bound returns [EObject current=null]:
@@ -6104,13 +6122,13 @@ ruleoutput_value returns [EObject current=null]
 
 RULE_STRINGS : '\'' ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|'^'|'?'|'.'|'/'|'\\'|'*'|'%'|'&'|'@'|'#'|'('|')'|'$'|'='|'{'|'}'|'['|']'|','|'!'|'|'|'+'|'-')* '\'';
 
+RULE_ML_COMMENT : ('(*' ( options {greedy=false;} : . )*'*)'|'{' ( options {greedy=false;} : . )*'}');
+
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_INT : ('0'..'9')+;
 
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
-
-RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
