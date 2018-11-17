@@ -5,7 +5,7 @@ package org.xtext.example.pascal
 
 
 /**
- * Initialization support for running Xtext languages without Equinox extension registry.
+ * Initialization support for running Xtext languages without Equinox extension registry..
  */
 class PascalStandaloneSetup extends PascalStandaloneSetupGenerated {
 

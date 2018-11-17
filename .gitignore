@@ -38,3 +38,4 @@ xtend-gen/
 
 # End of https://www.gitignore.io/api/java,xtext
 
+/.metadata/
