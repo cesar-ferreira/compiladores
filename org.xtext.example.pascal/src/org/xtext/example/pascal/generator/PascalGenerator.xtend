@@ -37,8 +37,7 @@ class PascalGenerator extends AbstractGenerator {
 			currentReg = 0;
 			currentLine = 0;
 			mapRegs = new HashMap<String, String>();
-			fsa.deleteFile("output.asm");
-			fsa.generateFile("output.asm", p.block.compile);
+			fsa.generateFile("/output.txt", p.block.compile);
 		}
 
 	}	

@@ -40,9 +40,10 @@ Workflow {
 				// composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
 			}
 			parserGenerator = {
-				options = {
-					backtrack = true
-				}
+				debugGrammar = true
+  				options = {
+    				backtrack = true
+  				}
 			}
 		}
 	}
